@@ -5,6 +5,6 @@ module PostalCode
     match = CSV.read(File.join(File.dirname(__FILE__), "../data/ken_all.csv")).find do |row|
       row[2] == postal_code.tr("-", "")
     end
-    match[6,3]
+    match && match[6,3]
   end
 end
