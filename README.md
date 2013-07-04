@@ -32,3 +32,5 @@ How can we improve the performance of this to an acceptable level? If we want to
   * minimize dependencies (it should be possible to use the library without any special setup)
 
 Some of these requirements are in opposition to each other. Depending on the application that uses the library, one may be important than another. Focus on one or more of these goals to improve the application.
+
+There are some basic performance tests in the Rakefile. Run `rake benchmark` to run them.
