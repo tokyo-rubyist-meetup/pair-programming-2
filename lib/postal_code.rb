@@ -1,7 +1,10 @@
 require "csv"
 
 module PostalCode
-  def self.load_data
-    CSV.read(File.join(File.dirname(__FILE__), "../data/ken_all.csv"))
+  def self.find(postal_code)
+    match = CSV.read(File.join(File.dirname(__FILE__), "../data/ken_all.csv")).find do |row|
+      row[2] == postal_code.tr("-", "")
+    end
+    match[6,3]
   end
 end
