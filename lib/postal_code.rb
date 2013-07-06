@@ -7,4 +7,8 @@ module PostalCode
     end
     match && match[6,3]
   end
+
+  def self.reverse_lookup(address)
+    nil
+  end
 end
